@@ -23,9 +23,9 @@ class Solution:
             return -1,-1
         else:
             pos1 = nums.index(sorted_num[left])
-            pos2 = nums.index(sorted_num[right])
+            pos2 = nums.index(sorted_num[right]) #题目要求返回的是以0为起始
             if pos1==pos2:
-                pos2 = nums[pos1+1:].index(sorted_num[right])+pos1+1
+                pos2 = nums[pos1+1:].index(sorted_num[right])+pos1+1 #如果两者相同，说明数值一样，查到的index一样，以pos1的后一位为起始搜索
 
             return min(pos1,pos2),max(pos1,pos2)
         
